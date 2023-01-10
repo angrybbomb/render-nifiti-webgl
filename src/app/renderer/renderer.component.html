@@ -1,0 +1,83 @@
+<div id="menu-container">
+  <input id="file-input" type="file" name="name" style="display: none;" />
+  <ul>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" id="FileMenu">File</a>
+      <div class="dropdown-content">
+        <a class="viewBtn" id="Open">Open</a>
+        <a class="viewBtn" id="SaveBitmap">Screen Shot</a>
+        <a class="linker" href="https://github.com/rordenlab/MRIcroWeb">About</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" id="ViewMenu">View</a>
+      <div class="dropdown-content">
+        <a class="viewBtn" id="L">Left</a>
+        <a class="viewBtn" id="R">Right</a>
+        <a class="viewBtn" id="P">Posterior</a>
+        <a class="viewBtn" id="A">Anterior</a>
+        <a class="viewBtn" id="I">Inferior</a>
+        <a class="viewBtn" id="S">Superior</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Color</a>
+      <div class="dropdown-content">
+        <a class="viewBtn" id="!Gray">Gray</a>
+        <a class="viewBtn" id="!Plasma">Plasma</a>
+        <a class="viewBtn" id="!Viridis">Viridis</a>
+        <a class="viewBtn" id="!Inferno">Inferno</a>
+        <!-- <a class="viewBtn dropdown-item-checked" id="^Lighting">Lighting</a>  -->
+        <a class="divider" id="BackColor">Background Color</a>
+        <a class="viewBtn" id="ChangeContrast">Adjust brightness and contrast</a>
+        <a class="viewBtn" id="OpacityInc">Harder Edges</a>
+        <a class="viewBtn" id="OpacityDec">Softer Edges</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Shader</a>
+      <div class="dropdown-content">
+        <a class="viewBtn" id="^Standard">Standard</a>
+        <a class="viewBtn" id="^Lighting">Lighting</a>
+        <a class="viewBtn" id="^MIP">Maximum Intensity</a>
+        <a class="viewBtn" id="^Gradients">Gradients</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Examples</a>
+      <div class="dropdown-content">
+        <a class="viewBtn" id="_spm152.nii.gz">spm</a>
+        <a class="viewBtn" id="_avg152T1_LR_nifti.nii.gz">avg</a>
+        <a class="viewBtn" id="_Chris_MRA.nii.gz">MRA</a>
+        <a class="viewBtn" id="_Chris_T1.nii.gz">T1</a>
+        <a class="viewBtn" id="_Chris_T2.nii.gz">T2</a>
+      </div>
+    </li>
+  </ul>
+</div>
+<div id="gl-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: #938f8f">
+<!--  <mat-toolbar class="pl-1 " style="background-color: #c7c7c7; font-size: small; height: 30px;">-->
+<!--    <span class="fill-space"></span>-->
+<!--    <span>Min <mat-slider style="width: 250px;"-->
+<!--                          color="primary"-->
+<!--                          [displayWith]="formatLabel"-->
+<!--                          [(ngModel)]="minValue"-->
+<!--                          (change)="adjustMinValue($event)"-->
+<!--                          tickInterval="1"-->
+<!--                          step="1"-->
+<!--                          min="-3024"-->
+<!--                          max="0"-->
+<!--                          aria-label="units"></mat-slider>&nbsp;&nbsp;<span style="width: 50px;display: inline-block;">{{minValue}}</span></span>-->
+<!--    <span class="ml-1">Max <mat-slider style="width: 250px;"-->
+<!--                                       color="primary"-->
+<!--                                       [displayWith]="formatLabel"-->
+<!--                                       [(ngModel)]="maxValue"-->
+<!--                                       (change)="adjustMaxValue($event)"-->
+<!--                                       tickInterval="1"-->
+<!--                                       step="1"-->
+<!--                                       min="0"-->
+<!--                                       max="3071"-->
+<!--                                       aria-label="units"></mat-slider>&nbsp;&nbsp;<span style="width: 50px;display: inline-block;">{{maxValue}}</span></span>-->
+<!--  </mat-toolbar>-->
+  <canvas #glcanvas id="glcanvas" ></canvas>
+</div>
